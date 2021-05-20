@@ -29,7 +29,7 @@ const NavBar: NextPage = () => {
   const MainContent = useBreakpointValue({ base: <MobileContent isOpen={isOpen} onToggle={onToggle} />, md: <DesktopContent /> });
   return (
     <HStack w="100%" p={8}>
-      <Heading h1 pos="relative" zIndex={4} color={isOpen ? 'white' : 'black'}>Vote Nick</Heading>
+      <Heading pos="relative" zIndex={4} color={isOpen ? 'white' : 'black'}>Vote Nick</Heading>
       <Spacer />
       {MainContent}
     </HStack>
