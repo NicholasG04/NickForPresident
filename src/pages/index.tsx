@@ -1,9 +1,12 @@
+import TitlePane from 'components/TitlePane';
+import CreditPane from 'components/CreditPane';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => (
-  <div>
-    hi
-  </div>
+  <>
+    <TitlePane />
+    <CreditPane />
+  </>
 );
 
 export default Home;

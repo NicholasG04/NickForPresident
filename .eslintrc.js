@@ -32,6 +32,7 @@ module.exports = {
       rules: {
         'react/prop-types': 'off',
         'react/react-in-jsx-scope': 'off',
+        'react/jsx-props-no-spreading': 'off',
         'jsx-a11y/anchor-is-valid': 'off',
         '@typescript-eslint/no-unused-vars': ['error'],
         '@typescript-eslint/explicit-function-return-type': [
@@ -41,6 +42,7 @@ module.exports = {
             allowConciseArrowFunctionExpressionsStartingWithVoid: true,
           },
         ],
+        'max-len': 'off',
       },
     },
   ],

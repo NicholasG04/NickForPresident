@@ -11,7 +11,6 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <ChakraProvider>
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Component {...pageProps} />
     </ChakraProvider>
   </>
