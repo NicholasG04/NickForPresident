@@ -7,7 +7,7 @@ import PaneLayout from '../Base/PaneLayout';
 const EducationPane: NextPage = () => (
   <PaneLayout bgColor="blackAlpha.900" color="white" textAlign="right">
     <VStack minH="100vh">
-      <Heading style={{ textTransform: 'uppercase' }} fontSize="calc(48px + 3vw)" p={8}>
+      <Heading style={{ textTransform: 'uppercase' }} fontSize="calc(48px + 3vw)" p={8} w="100%">
         Education
         <chakra.span color="purple"> For the many</chakra.span>
       </Heading>
