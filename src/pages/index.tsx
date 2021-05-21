@@ -4,6 +4,7 @@ import VoicePane from 'components/VoicePane';
 import BannerPane from 'components/BannerPane';
 import TeamsPane from 'components/TeamsPane';
 import EducationPane from 'components/EducationPane';
+import EndorsementsPane from 'components/EndorsementsPane';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => (
@@ -15,6 +16,8 @@ const Home: NextPage = () => (
     <EducationPane />
 
     <TeamsPane />
+
+    <EndorsementsPane />
 
     <BannerPane />
 
