@@ -20,7 +20,7 @@ const TitlePane: NextPage = () => {
         <Button isActive colorScheme="purple" mt={5} size="lg">What can Nick offer me?</Button>
       </Box>
       <Box opacity={isMobile ? '0.7' : '1.0'} pos="absolute" bottom="-5px" maxW="70%">
-        <Image layout="intrinsic" src="/face.png" width={600} height={633} />
+        <Image layout="intrinsic" src="/face.png" width={600} height={633} priority />
       </Box>
     </PaneLayout>
   );
