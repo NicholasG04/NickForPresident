@@ -1,5 +1,5 @@
 import {
-  Heading, UnorderedList, ListItem, Stack, Divider, Center, Box, StackDivider,
+  Heading, UnorderedList, ListItem, Stack, Box, StackDivider,
 } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import PaneLayout from '../Base/PaneLayout';
