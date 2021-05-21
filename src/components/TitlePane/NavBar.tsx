@@ -9,7 +9,6 @@ const MobileContent: React.FC<Partial<UseDisclosureReturn>> = ({ isOpen, onToggl
     <IconButton colorScheme="gray" backgroundColor={isOpen ? 'white' : 'black'} color={isOpen ? 'black' : 'white'} _hover={{}} aria-label="Toggle Menu" icon={!isOpen ? <HamburgerIcon /> : <CloseIcon />} onClick={onToggle} pos="relative" zIndex={4} />
     {isOpen && (
       <VStack marginInlineStart="0 !important" pos="fixed" p={3} left="0" top="0" paddingTop="100px" bgColor="black" color="white" width="100%" height="100vh" zIndex={3}>
-        <h1>Vote Nick</h1>
         <p>Policy</p>
         <p>Endorsements</p>
       </VStack>
