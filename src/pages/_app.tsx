@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
@@ -11,7 +12,9 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <ChakraProvider>
-      <Component {...pageProps} />
+      <ParallaxProvider>
+        <Component {...pageProps} />
+      </ParallaxProvider>
     </ChakraProvider>
   </>
 );

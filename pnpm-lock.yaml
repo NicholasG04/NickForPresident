@@ -6,6 +6,7 @@ dependencies:
   next: 10.2.2_507781d099a67956587e23f5ac79078b
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-scroll-parallax: 2.4.0_react-dom@17.0.2+react@17.0.2
 devDependencies:
   '@emotion/styled': 11.3.0_03f2ead336d1c2c7a9d740605b4a9298
   '@types/react': 17.0.6
@@ -3787,6 +3788,17 @@ packages:
         optional: true
     resolution:
       integrity: sha512-K7XZySEzOHMTq7dDwcHsZA6Y7/1uX5RsWhRXVYv8rdh+y9Qz2nMwl9RX/Mwnj/j7JstCGmxyfyC0zbVGXYh3mA==
+  /react-scroll-parallax/2.4.0_react-dom@17.0.2+react@17.0.2:
+    dependencies:
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+    peerDependencies:
+      react: ^16.3.0-0 || >=17.0.1
+      react-dom: ^16.3.0-0 || >=17.0.1
+    resolution:
+      integrity: sha512-lFbf2SIEyxyIko/edR8Fx2mnn4T0t2WzLBa4E5ApoGwDsSWS1crL+LjRYtin+f3EV+rmBDzWqqr7vB5GsRpg9Q==
   /react-style-singleton/2.1.1_@types+react@17.0.6+react@17.0.2:
     dependencies:
       '@types/react': 17.0.6
@@ -4627,4 +4639,5 @@ specifiers:
   next: 10.2.2
   react: 17.0.2
   react-dom: 17.0.2
+  react-scroll-parallax: ^2.4.0
   typescript: ^4.2.4
