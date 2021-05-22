@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { useAnalytics } from '@happykit/analytics';
+import { appWithTranslation } from 'next-i18next';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
@@ -23,4 +24,4 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);

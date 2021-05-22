@@ -5,7 +5,14 @@ import BannerPane from 'components/BannerPane';
 import TeamsPane from 'components/TeamsPane';
 import EducationPane from 'components/EducationPane';
 import EndorsementsPane from 'components/EndorsementsPane';
-import type { NextPage } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import type { GetStaticProps, NextPage } from 'next';
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common', 'titlePane', 'voicePane', 'educationPane', 'teamsPane', 'endorsementsPane', 'bannerPane', 'creditPane'])),
+  },
+});
 
 const Home: NextPage = () => (
   <>
