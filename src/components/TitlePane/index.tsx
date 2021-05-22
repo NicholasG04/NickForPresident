@@ -4,6 +4,7 @@ import {
 import { NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { Link as ScrollLink } from 'react-scroll';
 import PaneLayout from '../Base/PaneLayout';
 import NavBar from './NavBar';
 
@@ -19,7 +20,10 @@ const TitlePane: NextPage = () => {
           {t('sloganBlack')}
           <chakra.span color="purple">{t('sloganPurple')}</chakra.span>
         </Heading>
-        <Button isActive colorScheme="purple" mt={5} size="lg">{t('button')}</Button>
+
+        <ScrollLink to="voicePane" smooth offset={-105}>
+          <Button isActive colorScheme="purple" mt={5} size="lg">{t('button')}</Button>
+        </ScrollLink>
       </Box>
       <Box opacity={isMobile ? '0.7' : '1.0'} pos="absolute" bottom="-5px" maxW="70%">
         <Image layout="intrinsic" src="/face.png" width={600} height={633} priority />

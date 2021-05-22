@@ -6,6 +6,7 @@ import TeamsPane from 'components/TeamsPane';
 import EducationPane from 'components/EducationPane';
 import EndorsementsPane from 'components/EndorsementsPane';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { Element } from 'react-scroll';
 import type { GetStaticProps, NextPage } from 'next';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
@@ -16,15 +17,21 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 
 const Home: NextPage = () => (
   <>
-    <TitlePane />
+    <Element name="titlePane">
+      <TitlePane />
+    </Element>
 
-    <VoicePane />
+    <Element name="voicePane">
+      <VoicePane />
+    </Element>
 
     <EducationPane />
 
     <TeamsPane />
 
-    <EndorsementsPane />
+    <Element name="endorsementsPane">
+      <EndorsementsPane />
+    </Element>
 
     <BannerPane />
 

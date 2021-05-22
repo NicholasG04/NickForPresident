@@ -8,7 +8,9 @@ dependencies:
   next-i18next: 8.3.0_next@10.2.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-scroll: 1.8.2_react-dom@17.0.2+react@17.0.2
   react-scroll-parallax: 2.4.0_react-dom@17.0.2+react@17.0.2
+  react-use-scroll-position: 2.0.0_react@17.0.2
 devDependencies:
   '@emotion/styled': 11.3.0_03f2ead336d1c2c7a9d740605b4a9298
   '@types/react': 17.0.6
@@ -3088,6 +3090,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
+  /lodash.throttle/4.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
   /lodash.truncate/4.4.2:
     dev: true
     resolution:
@@ -3885,6 +3891,18 @@ packages:
       react-dom: ^16.3.0-0 || >=17.0.1
     resolution:
       integrity: sha512-lFbf2SIEyxyIko/edR8Fx2mnn4T0t2WzLBa4E5ApoGwDsSWS1crL+LjRYtin+f3EV+rmBDzWqqr7vB5GsRpg9Q==
+  /react-scroll/1.8.2_react-dom@17.0.2+react@17.0.2:
+    dependencies:
+      lodash.throttle: 4.1.1
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+    peerDependencies:
+      react: ^15.5.4 || ^16.0.0 || ^17.0.0
+      react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0
+    resolution:
+      integrity: sha512-f2ZEG5fsPbPTySI9ekcFpETCcNlqbmwbQj9hhzYK8tkgv+PA8APatSt66o/q0KSkDZxyT98ONTtXp9x0lyowEw==
   /react-style-singleton/2.1.1_@types+react@17.0.6+react@17.0.2:
     dependencies:
       '@types/react': 17.0.6
@@ -3903,6 +3921,14 @@ packages:
         optional: true
     resolution:
       integrity: sha512-jNRp07Jza6CBqdRKNgGhT3u9umWvils1xsuMOjZlghBDH2MU0PL2WZor4PGYjXpnRCa9DQSlHMs/xnABWOwYbA==
+  /react-use-scroll-position/2.0.0_react@17.0.2:
+    dependencies:
+      react: 17.0.2
+    dev: false
+    peerDependencies:
+      react: '>=16.8.0'
+    resolution:
+      integrity: sha512-nQaWMPElzI8aN1vYTnqy0xV17pEhItgyWUBOtdmMEqsbY1mV3+iZMyTeAJ+oegsQIugYxBU4LnV2NosynN+KKA==
   /react/17.0.2:
     dependencies:
       loose-envify: 1.4.0
@@ -4733,5 +4759,7 @@ specifiers:
   next-i18next: ^8.3.0
   react: 17.0.2
   react-dom: 17.0.2
+  react-scroll: ^1.8.2
   react-scroll-parallax: ^2.4.0
+  react-use-scroll-position: ^2.0.0
   typescript: ^4.2.4

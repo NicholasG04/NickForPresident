@@ -4,16 +4,20 @@ import {
 import Link from 'next/link';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
+import { Link as ScrollLink } from 'react-scroll';
+import { useScrollYPosition } from 'react-use-scroll-position';
 import type { NextPage } from 'next';
 import type { NextRouter } from 'next/router';
 
-const MobileContent: React.FC<Partial<UseDisclosureReturn> & { router: NextRouter }> = ({ isOpen, onToggle, router }) => (
+const MobileContent: React.FC<Partial<UseDisclosureReturn> & { router: NextRouter }> = ({
+  isOpen, onToggle, onClose, router,
+}) => (
   <>
-    <IconButton colorScheme="gray" backgroundColor={isOpen ? 'white' : 'black'} color={isOpen ? 'black' : 'white'} _hover={{}} aria-label="Toggle Menu" icon={!isOpen ? <HamburgerIcon /> : <CloseIcon />} onClick={onToggle} pos="relative" zIndex={4} />
+    <IconButton colorScheme="gray" backgroundColor={isOpen ? 'white' : 'black'} color={isOpen ? 'black' : 'white'} _hover={{}} aria-label="Toggle Menu" icon={!isOpen ? <HamburgerIcon /> : <CloseIcon />} onClick={onToggle} zIndex={5} />
     {isOpen && (
-      <VStack marginInlineStart="0 !important" pos="fixed" p={3} left="0" top="0" paddingTop="100px" bgColor="black" color="white" width="100%" height="100vh" zIndex={3}>
-        <p>Policy</p>
-        <p>Endorsements</p>
+      <VStack fontSize={25} spacing={5} justify="center" marginInlineStart="0 !important" p={3} left="0" top="0" bgColor="black" color="white" width="100%" height="100vh" zIndex={4} pos="fixed">
+        <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="voicePane" onClick={onClose}><a>Policy</a></ScrollLink>
+        <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="endorsementsPane" onClick={onClose}><a>Endorsements</a></ScrollLink>
         <Link href="/" locale={router.locale === 'en' ? 'fr' : 'en'}>
           <a>{router.locale === 'en' ? 'Français' : 'English'}</a>
         </Link>
@@ -23,22 +27,27 @@ const MobileContent: React.FC<Partial<UseDisclosureReturn> & { router: NextRoute
 );
 
 const DesktopContent: React.FC<{ router: NextRouter }> = ({ router }) => (
-  <>
-    <p>Policy</p>
-    <p>Endorsements</p>
+  <HStack>
+    <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="voicePane"><a>Policy</a></ScrollLink>
+    <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="endorsementsPane">Endorsements</ScrollLink>
     <Link href="/" locale={router.locale === 'en' ? 'fr' : 'en'}>
       <a>{router.locale === 'en' ? 'Français' : 'English'}</a>
     </Link>
-  </>
+  </HStack>
 );
 
 const NavBar: NextPage = () => {
   const router = useRouter();
-  const { isOpen, onToggle } = useDisclosure();
-  const MainContent = useBreakpointValue({ base: <MobileContent isOpen={isOpen} onToggle={onToggle} router={router} />, md: <DesktopContent router={router} /> });
+  const { isOpen, onToggle, onClose } = useDisclosure();
+  const MainContent = useBreakpointValue({ base: <MobileContent isOpen={isOpen} onToggle={onToggle} onClose={onClose} router={router} />, md: <DesktopContent router={router} /> });
+  const scrollY = useScrollYPosition();
   return (
-    <HStack w="100%" p={8}>
-      <Heading pos="relative" zIndex={4} color={isOpen ? 'white' : 'black'}>Vote Nick</Heading>
+    <HStack w="100%" p={8} pos="fixed" bg={scrollY > 25 ? 'linear-gradient(180deg, #C8C4C4 0%, #DDDDDD 100%);' : ''} borderBottom={scrollY > 25 ? '2px solid #8C8B8B' : ''} zIndex={3}>
+      <ScrollLink style={{ cursor: 'pointer' }} smooth to="titlePane" onClick={onClose}>
+        <a>
+          <Heading pos="relative" zIndex={5} color={isOpen ? 'white' : 'black'}>Vote Nick</Heading>
+        </a>
+      </ScrollLink>
       <Spacer />
       {MainContent}
     </HStack>
