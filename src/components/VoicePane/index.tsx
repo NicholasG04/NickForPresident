@@ -19,7 +19,6 @@ const VoicePane: NextPage = () => (
               playsInline
               preload="auto"
               muted
-              poster="/voice_vid_preview.jpg"
               src="/voice_vid.mp4"
               style={{
                 height: '120vh',

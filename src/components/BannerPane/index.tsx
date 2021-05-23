@@ -11,7 +11,7 @@ const VoicePane: NextPage = () => (
     <ParallaxBanner
       layers={[
         {
-          amount: 0.5,
+          amount: 1,
           children: (
             <video
               autoPlay
@@ -19,10 +19,8 @@ const VoicePane: NextPage = () => (
               playsInline
               preload="auto"
               muted
-              poster="/voice_vid_preview.jpg"
-              src="/voice_vid.mp4"
+              src="/banner_vid.mp4"
               style={{
-                height: '100vh',
                 width: '100vw',
                 opacity: '0.7',
                 objectFit: 'cover',
