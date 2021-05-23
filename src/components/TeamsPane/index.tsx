@@ -3,22 +3,26 @@ import {
 } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
+import { useTranslation } from 'next-i18next';
 import PaneLayout from '../Base/PaneLayout';
 
-const TextSection: React.FC = () => (
-  <Box pos="relative" zIndex={2} p="30px" h="100vh">
+const TextSection: React.FC = () => {
+  const { t } = useTranslation('teamsPane');
+  return (
+    <Box pos="relative" zIndex={2} p="30px" h="100vh">
 
-    <Heading style={{ textTransform: 'uppercase' }} fontSize="calc(48px + 3vw)">
-      Putting Kimberley in the
-      <chakra.span color="purple"> 21st century</chakra.span>
-    </Heading>
+      <Heading style={{ textTransform: 'uppercase' }} fontSize="calc(48px + 3vw)">
+        {t('titleBlack')}
+        <chakra.span color="purple">{t('titlePurple')}</chakra.span>
+      </Heading>
 
-    <Text fontSize="calc(20px + 0.2vw)" fontWeight="600" minW="300px" maxW="800px">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </Text>
+      <Text fontSize="calc(20px + 0.2vw)" fontWeight="600" minW="300px" maxW="800px">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Text>
 
-  </Box>
-);
+    </Box>
+  );
+};
 
 const DesktopContent: React.FC = () => (
   <HStack maxH="100vh">

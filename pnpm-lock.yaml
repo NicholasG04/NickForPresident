@@ -11,9 +11,11 @@ dependencies:
   react-scroll: 1.8.2_react-dom@17.0.2+react@17.0.2
   react-scroll-parallax: 2.4.0_react-dom@17.0.2+react@17.0.2
   react-use-scroll-position: 2.0.0_react@17.0.2
+  use-scroll-position: 0.0.4_react@17.0.2
 devDependencies:
   '@emotion/styled': 11.3.0_03f2ead336d1c2c7a9d740605b4a9298
   '@types/react': 17.0.6
+  '@types/react-scroll': 1.8.2
   '@typescript-eslint/eslint-plugin': 4.24.0_59c9e933fd1a489015de5df6809ac2f2
   '@typescript-eslint/parser': 4.24.0_eslint@7.26.0+typescript@4.2.4
   eslint: 7.26.0
@@ -1192,6 +1194,12 @@ packages:
   /@types/prop-types/15.7.3:
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+  /@types/react-scroll/1.8.2:
+    dependencies:
+      '@types/react': 17.0.6
+    dev: true
+    resolution:
+      integrity: sha512-oavV6BZLfaIghX4JSmrm6mJkeVayQlmsFx1Rz8ffGjMngHAI/juZkRZM/zV/H5D0pGqjzACvBmKYUU4YBecwLg==
   /@types/react/17.0.6:
     dependencies:
       '@types/prop-types': 15.7.3
@@ -4579,6 +4587,14 @@ packages:
         optional: true
     resolution:
       integrity: sha512-gN3vgMISAgacF7sqsLPByqoePooY3n2emTH59Ur5d/M8eg4WTWu1xp8i8DHjohftIyEx0S08RiYxbffr4j8Peg==
+  /use-scroll-position/0.0.4_react@17.0.2:
+    dependencies:
+      react: 17.0.2
+    dev: false
+    peerDependencies:
+      react: ^16.8.1
+    resolution:
+      integrity: sha512-niACVxsyo26TOR4F6MxipXULZE8W/HyB7SBkXnax1XrbuohLU2tZbMGySHBctgGH2E55gM+wGyCcFvueeWmbQA==
   /use-sidecar/1.0.5_react@17.0.2:
     dependencies:
       detect-node-es: 1.1.0
@@ -4746,6 +4762,7 @@ specifiers:
   '@emotion/styled': ^11
   '@happykit/analytics': ^1.0.1
   '@types/react': ^17.0.6
+  '@types/react-scroll': ^1.8.2
   '@typescript-eslint/eslint-plugin': ^4.24.0
   '@typescript-eslint/parser': ^4.24.0
   eslint: ^7.26.0
@@ -4763,3 +4780,4 @@ specifiers:
   react-scroll-parallax: ^2.4.0
   react-use-scroll-position: ^2.0.0
   typescript: ^4.2.4
+  use-scroll-position: ^0.0.4

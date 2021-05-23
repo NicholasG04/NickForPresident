@@ -9,7 +9,7 @@ import PaneLayout from '../Base/PaneLayout';
 import NavBar from './NavBar';
 
 const TitlePane: NextPage = () => {
-  const isMobile = ['base', 'sm'].includes(useBreakpoint());
+  const isNotDesktop = ['base', 'sm', 'md', 'lg'].includes(useBreakpoint());
   const { t } = useTranslation('titlePane');
   return (
     <PaneLayout position="relative" bgGradient="linear-gradient(180deg, #C8C4C4 0%, rgba(255, 255, 255, 0.50) 50%, rgba(155, 154, 154, 0.80) 100%);">
@@ -25,7 +25,7 @@ const TitlePane: NextPage = () => {
           <Button isActive colorScheme="purple" mt={5} size="lg">{t('button')}</Button>
         </ScrollLink>
       </Box>
-      <Box opacity={isMobile ? '0.7' : '1.0'} pos="absolute" bottom="-5px" maxW="70%">
+      <Box opacity={isNotDesktop ? '0.7' : '1.0'} pos="absolute" bottom="-6px" maxW="70%">
         <Image layout="intrinsic" src="/face.png" width={600} height={633} priority />
       </Box>
     </PaneLayout>
