@@ -72,7 +72,7 @@ export default function Home() {
         <meta name="description" content="Website for Nick's College President Campaign 2021" />
       </Head>
 
-      <div style={mainStyles}>
+      <div style={mainStyles as any}>
         <h1 style={{ fontSize: 64 }}>#NickForPresident</h1>
         <h1 style={{width: '70vw'}}>The campaign has almost started, stay tuned for the launch on Saturday 29/05/2021 at 15:00</h1>
         <h2>Time until campaign launch:</h2>
