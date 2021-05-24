@@ -27,7 +27,7 @@ const DesktopContent: React.FC = () => (
     <Spacer />
     <Parallax y={[-50, 50]}>
       <Box>
-        <Image src="/teams.png" height="120vh" minW="380px" />
+        <Image src="/teams.png" height="120vh" minW="380px" maxWidth="none" />
       </Box>
     </Parallax>
   </HStack>
