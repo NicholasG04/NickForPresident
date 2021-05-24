@@ -73,7 +73,7 @@ export default function Home() {
       </Head>
 
       <div style={mainStyles as any}>
-        <h1 style={{ fontSize: 64 }}>#NickForPresident</h1>
+        <h1 style={{ fontSize: '10vw' }}>#NickForPresident</h1>
         <h1 style={{width: '70vw'}}>The campaign has almost started, stay tuned for the launch on Saturday 29/05/2021 at 15:00</h1>
         <h2>Time until campaign launch:</h2>
         <div style={{fontSize: 22}}>{timerComponents.length ? timerComponents : <span>Campaign Launched!</span>}</div>
