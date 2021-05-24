@@ -22,6 +22,7 @@ const VoicePane: NextPage = () => (
               src="/banner_vid.mp4"
               style={{
                 width: '100vw',
+                minHeight: '1500px',
                 opacity: '0.7',
                 objectFit: 'cover',
               }}
