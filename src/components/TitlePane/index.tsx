@@ -21,7 +21,7 @@ const TitlePane: NextPage = () => {
           <chakra.span color="purple">{t('sloganPurple')}</chakra.span>
         </Heading>
 
-        <ScrollLink to="voicePane" smooth offset={-105}>
+        <ScrollLink to="voicePane" smooth offset={-75}>
           <Button isActive colorScheme="purple" mt={5} size="lg">{t('button')}</Button>
         </ScrollLink>
       </Box>

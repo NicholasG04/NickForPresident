@@ -16,8 +16,8 @@ const MobileContent: React.FC<Partial<UseDisclosureReturn> & { router: NextRoute
     <IconButton colorScheme="gray" backgroundColor={isOpen ? 'white' : 'black'} color={isOpen ? 'black' : 'white'} _hover={{}} aria-label="Toggle Menu" icon={!isOpen ? <HamburgerIcon /> : <CloseIcon />} onClick={onToggle} zIndex={5} />
     {isOpen && (
       <VStack fontSize={25} spacing={5} justify="center" marginInlineStart="0 !important" p={3} left="0" top="0" bgColor="black" color="white" width="100%" height="100vh" zIndex={4} pos="fixed">
-        <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="voicePane" onClick={onClose}>Policy</ScrollLink>
-        <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="endorsementsPane" onClick={onClose}>Endorsements</ScrollLink>
+        <ScrollLink offset={-75} style={{ cursor: 'pointer' }} smooth to="voicePane" onClick={onClose}>Policy</ScrollLink>
+        <ScrollLink offset={-75} style={{ cursor: 'pointer' }} smooth to="endorsementsPane" onClick={onClose}>Endorsements</ScrollLink>
         <Link href="/" locale={router.locale === 'en' ? 'fr' : 'en'}>
           <a>{router.locale === 'en' ? 'Français' : 'English'}</a>
         </Link>
@@ -28,8 +28,8 @@ const MobileContent: React.FC<Partial<UseDisclosureReturn> & { router: NextRoute
 
 const DesktopContent: React.FC<{ router: NextRouter }> = ({ router }) => (
   <HStack>
-    <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="voicePane">Policy</ScrollLink>
-    <ScrollLink offset={-105} style={{ cursor: 'pointer' }} smooth to="endorsementsPane">Endorsements</ScrollLink>
+    <ScrollLink offset={-75} style={{ cursor: 'pointer' }} smooth to="voicePane">Policy</ScrollLink>
+    <ScrollLink offset={-75} style={{ cursor: 'pointer' }} smooth to="endorsementsPane">Endorsements</ScrollLink>
     <Link href="/" locale={router.locale === 'en' ? 'fr' : 'en'}>
       <a>{router.locale === 'en' ? 'Français' : 'English'}</a>
     </Link>
