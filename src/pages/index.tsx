@@ -70,6 +70,7 @@ export default function Home() {
       <Head>
         <title>Nick for College President</title>
         <meta name="description" content="Website for Nick's College President Campaign 2021" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div style={mainStyles as any}>
