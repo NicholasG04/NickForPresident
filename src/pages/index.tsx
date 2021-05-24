@@ -1,7 +1,10 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
+import { useAnalytics } from '@happykit/analytics'
 
 export default function Home() {
+
+  useAnalytics({ publicKey: 'analytics_pub_60b6210453' });
 
   const calculateTimeLeft = () => {
     const difference = +new Date('May 29, 2021 15:00:00 GMT+01:00') - +new Date();

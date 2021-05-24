@@ -1,4 +1,5 @@
 dependencies:
+  '@happykit/analytics': 1.0.1_next@10.2.2+react@17.0.2
   next: 10.2.2_507781d099a67956587e23f5ac79078b
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -56,6 +57,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-sqKVVVOe5ivCaXDWivIJYVSaEgdQK9ul7a4Kity5Iw7u9+wBAPbX1RMSnLLmp7O4Vzj0WOWwMAJsTL00xwaNug==
+  /@happykit/analytics/1.0.1_next@10.2.2+react@17.0.2:
+    dependencies:
+      next: 10.2.2_507781d099a67956587e23f5ac79078b
+      react: 17.0.2
+    dev: false
+    engines:
+      node: '>=10'
+    peerDependencies:
+      next: '>=9.1.7'
+      react: '>=16'
+    resolution:
+      integrity: sha512-yA0XHxDrfFqjD0R2mKQHsHvJlesoXno7795XbcI7WMDFBnZ02Y/ai5ZyVu17PP4B82pmpOa8zftSYizgtXzAhg==
   /@next/env/10.2.2:
     dev: false
     resolution:
@@ -1933,6 +1946,7 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
+  '@happykit/analytics': ^1.0.1
   '@types/react': ^17.0.6
   next: 10.2.2
   react: 17.0.2
