@@ -18,7 +18,8 @@ const theme = extendTheme({
     Text: {
       sizes: {
         paneBody: {
-          fontSize: ['l', 'xl', '2xl', '3xl'],
+          fontSize: ['l', 'xl', '2xl', '2xl', '3xl'],
+          whiteSpace: 'pre-line',
         },
       },
     },
