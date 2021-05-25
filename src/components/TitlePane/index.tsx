@@ -21,7 +21,7 @@ const TitlePane: NextPage = () => {
           <chakra.span color="purple">{t('sloganPurple')}</chakra.span>
         </Heading>
 
-        <HStack flexWrap="wrap" spacing={3} justify="right">
+        <HStack flexWrap="wrap" spacing={3} justify="flex-end">
 
         <ScrollLink to="aboutPane" smooth offset={-75}>
           <Button isActive colorScheme="purple" mt={5} size="lg">{t('aboutButton')}</Button>
