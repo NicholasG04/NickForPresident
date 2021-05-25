@@ -9,7 +9,7 @@ import PaneLayout from '../Base/PaneLayout';
 const TextSection: React.FC = () => {
   const { t } = useTranslation('teamsPane');
   return (
-    <Box pos="relative" zIndex={2} p="30px">
+    <Box p={2}>
       <Heading textTransform="uppercase" size="5xl">
         {t('titleBlack')}
         <chakra.span color="purple">{t('titlePurple')}</chakra.span>
@@ -46,7 +46,7 @@ const MobileContent: React.FC = () => (
       },
     ]}
     style={{
-      height: '120vh',
+      minHeight: '120vh',
     }}
   >
     <TextSection />

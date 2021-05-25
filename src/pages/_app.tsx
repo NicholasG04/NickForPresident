@@ -11,14 +11,14 @@ const theme = extendTheme({
     Heading: {
       sizes: {
         '5xl': {
-          fontSize: ['6xl', '7xl', null, '8xl'],
+          fontSize: ['5xl', '6xl', '7xl', '8xl'],
         },
       },
     },
     Text: {
       sizes: {
         paneBody: {
-          fontSize: ['xl', null, '2xl', '3xl'],
+          fontSize: ['l', 'xl', '2xl', '3xl'],
         },
       },
     },

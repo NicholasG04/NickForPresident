@@ -10,7 +10,7 @@ const EndorsementsPane: NextPage = () => {
   return (
     <PaneLayout bgColor="blackAlpha.900" color="white">
       <VStack minH="100vh">
-        <Heading style={{ textTransform: 'uppercase' }} fontSize="calc(48px + 3vw)" p={8} w="100%">
+        <Heading textTransform="uppercase" size="5xl" width="100%" p={3}>
           Endorsements
         </Heading>
         <UnorderedList fontSize="calc(20px + 0.6vw)" pl={12} whiteSpace="pre-line">
