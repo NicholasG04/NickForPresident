@@ -49,7 +49,7 @@ export default function Home() {
     fontSize: 16,
     fontFamily: "Segoe UI, Helvetica, Arial, sans-serif",
     backgroundColor: '#C8C4C4',
-    height: '100vh',
+    minHeight: '100vh',
     width: '100vw',
     padding: 0,
     margin: 0,
@@ -62,7 +62,9 @@ export default function Home() {
     flexFlow: "column nowrap",
     alignItems: 'center',
     paddingTop: '10vh',
-    overflow: 'hidden'
+    paddingBottom: '10vh',
+    overflowX: 'hidden',
+    boxSizing: 'border-box',
   }
 
   return (
@@ -74,7 +76,7 @@ export default function Home() {
       </Head>
 
       <div style={mainStyles as any}>
-        <h1 style={{ fontSize: '10vw' }}>#NickForPresident</h1>
+        <h1 style={{ fontSize: '10vw', marginBottom: '25px' }}>#NickForPresident</h1>
         <h1 style={{width: '70vw'}}>The campaign has almost started, stay tuned for the launch on Saturday 29/05/2021 at 15:00</h1>
         <h3>Follow @VoteNick2021 on Instagram for updates</h3>
         <h2>Time until campaign launch:</h2>
