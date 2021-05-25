@@ -7,7 +7,10 @@ import TeamsPane from 'components/TeamsPane';
 import EducationPane from 'components/EducationPane';
 import EndorsementsPane from 'components/EndorsementsPane';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { Element } from 'react-scroll';
+import { Element, Events } from 'react-scroll';
+import { ParallaxController, withController } from 'react-scroll-parallax';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import type { GetStaticProps, NextPage } from 'next';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
@@ -16,32 +19,49 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   },
 });
 
-const Home: NextPage = () => (
-  <>
-    <Element name="titlePane">
-      <TitlePane />
-    </Element>
+const Home: NextPage<{ parallaxController: ParallaxController }> = ({ parallaxController }) => {
+  const router = useRouter();
+  useEffect(() => {
+    Events.scrollEvent.register('end', () => {
+      parallaxController.update();
+    });
 
-    <Element name="aboutPane">
-      <AboutPane />
-    </Element>
+    const handleRouteChange = (): void => parallaxController.update();
 
-    <Element name="voicePane">
-      <VoicePane />
-    </Element>
+    router.events.on('routeChangeEnd', handleRouteChange);
 
-    <EducationPane />
+    return () => {
+      Events.scrollEvent.remove('end');
+      router.events.off('routeChangeEnd', handleRouteChange);
+    };
+  });
 
-    <TeamsPane />
+  return (
+    <>
+      <Element name="titlePane">
+        <TitlePane />
+      </Element>
 
-    <Element name="endorsementsPane">
-      <EndorsementsPane />
-    </Element>
+      <Element name="aboutPane">
+        <AboutPane />
+      </Element>
 
-    <BannerPane />
+      <Element name="voicePane">
+        <VoicePane />
+      </Element>
 
-    <CreditPane />
-  </>
-);
+      <EducationPane />
 
-export default Home;
+      <TeamsPane />
+
+      <Element name="endorsementsPane">
+        <EndorsementsPane />
+      </Element>
+
+      <BannerPane />
+
+      <CreditPane />
+    </>
+  );
+};
+export default withController(Home);
