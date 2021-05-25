@@ -9,7 +9,7 @@ import PaneLayout from '../Base/PaneLayout';
 const TextSection: React.FC = () => {
   const { t } = useTranslation('teamsPane');
   return (
-    <Box p={2}>
+    <Box p={8}>
       <Heading textTransform="uppercase" size="5xl">
         {t('titleBlack')}
         <chakra.span color="purple">{t('titlePurple')}</chakra.span>

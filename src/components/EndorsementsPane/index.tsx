@@ -40,7 +40,7 @@ const EndorsementsPane: NextPage = () => {
   return (
     <PaneLayout bgColor="blackAlpha.900" color="white">
       <VStack minH="100vh">
-        <Heading textTransform="uppercase" size="5xl" width="100%" p={3}>
+        <Heading textTransform="uppercase" size="5xl" width="100%" p={8}>
           Endorsements
         </Heading>
         {MainContent}
