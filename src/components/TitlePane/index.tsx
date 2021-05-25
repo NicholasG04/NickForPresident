@@ -1,5 +1,5 @@
 import {
-  chakra, Heading, Box, Button, useBreakpoint,
+  chakra, Heading, Box, Button, useBreakpoint, HStack,
 } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
@@ -21,9 +21,15 @@ const TitlePane: NextPage = () => {
           <chakra.span color="purple">{t('sloganPurple')}</chakra.span>
         </Heading>
 
-        <ScrollLink to="voicePane" smooth offset={-75}>
-          <Button isActive colorScheme="purple" mt={5} size="lg">{t('button')}</Button>
+        <HStack flexWrap="wrap" spacing={3} justify="right">
+
+        <ScrollLink to="aboutPane" smooth offset={-75}>
+          <Button isActive colorScheme="purple" mt={5} size="lg">{t('aboutButton')}</Button>
         </ScrollLink>
+        <ScrollLink to="voicePane" smooth offset={-75}>
+          <Button isActive colorScheme="purple" mt={5} size="lg">{t('policyButton')}</Button>
+        </ScrollLink>
+        </HStack>
       </Box>
       <Box opacity={isNotDesktop ? '0.7' : '1.0'} pos="absolute" bottom="-6px" maxW="70%">
         <Image layout="intrinsic" src="/face.png" width={600} height={633} priority />
