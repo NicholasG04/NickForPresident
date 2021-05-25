@@ -43,7 +43,7 @@ const VoicePane: NextPage = () => (
           <Heading size="5xl">
             Vote Nick
           </Heading>
-          <Heading size="xl">
+          <Heading size="xl" maxW="100%">
             Contact: hello@nickforpresident.co.uk
           </Heading>
           <Heading size="xl" mt={5}>
