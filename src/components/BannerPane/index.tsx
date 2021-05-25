@@ -37,14 +37,17 @@ const VoicePane: NextPage = () => (
       }}
     >
 
-      <Box pos="relative" zIndex={2}>
-        <Center flexFlow="column nowrap" h="500px" justifyContent="center" alignItems="center">
+      <Box pos="relative" zIndex={2} p={5}>
+        <Center flexFlow="column nowrap" h="500px" justifyContent="center" alignItems="center" textAlign="center">
 
-          <Heading fontSize="calc(50px + 3vw)">
+          <Heading size="5xl">
             Vote Nick
           </Heading>
-          <Heading fontSize="calc(16px + 3vw)" textAlign="center">
+          <Heading size="xl">
             Contact: hello@nickforpresident.co.uk
+          </Heading>
+          <Heading size="xl" mt={5}>
+            Instagram: @VoteNick2021
           </Heading>
 
         </Center>

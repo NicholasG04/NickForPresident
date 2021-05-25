@@ -9,12 +9,12 @@ import PaneLayout from '../Base/PaneLayout';
 const TextSection: React.FC = () => {
   const { t } = useTranslation('teamsPane');
   return (
-    <Box pos="relative" zIndex={2} p="30px" h="100vh">
-      <Heading style={{ textTransform: 'uppercase' }} fontSize="calc(48px + 3vw)">
+    <Box pos="relative" zIndex={2} p="30px">
+      <Heading textTransform="uppercase" size="5xl">
         {t('titleBlack')}
         <chakra.span color="purple">{t('titlePurple')}</chakra.span>
       </Heading>
-      <Text fontSize="calc(20px + 0.2vw)" fontWeight="600" minW="300px" maxW="800px">
+      <Text size="paneBody" fontWeight="600">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </Text>
     </Box>
@@ -22,13 +22,11 @@ const TextSection: React.FC = () => {
 };
 
 const DesktopContent: React.FC = () => (
-  <HStack maxH="100vh">
+  <HStack minH="100vh" align="stretch">
     <TextSection />
     <Spacer />
-    <Parallax y={[-50, 50]}>
-      <Box>
-        <Image src="/teams.png" height="120vh" minW="380px" maxWidth="none" />
-      </Box>
+    <Parallax y={[-10, 10]}>
+      <Image src="/teams.png" h="120vh" minH="1100px" maxW="none" />
     </Parallax>
   </HStack>
 );

@@ -14,8 +14,8 @@ const TitlePane: NextPage = () => {
   return (
     <PaneLayout position="relative" bgGradient="linear-gradient(180deg, #C8C4C4 0%, rgba(255, 255, 255, 0.50) 50%, rgba(155, 154, 154, 0.80) 100%);">
       <NavBar />
-      <Box pos="absolute" right="10vw" top="calc(100px + 20vh)" maxW="calc(300px + 40%)" textAlign="right" zIndex={2}>
-        <Heading style={{ textTransform: 'uppercase' }} fontSize="calc(48px + 3vw)">Nicholas Gregory</Heading>
+      <Box pos="absolute" right="10vw" top="30vh" maxW="calc(300px + 40%)" textAlign="right" zIndex={2}>
+        <Heading textTransform="uppercase" size="5xl">Nicholas Gregory</Heading>
         <Heading>
           {t('sloganBlack')}
           <chakra.span color="purple">{t('sloganPurple')}</chakra.span>

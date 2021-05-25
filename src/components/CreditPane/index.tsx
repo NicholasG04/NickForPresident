@@ -8,8 +8,8 @@ import PaneLayout from '../Base/PaneLayout';
 const CreditPane: NextPage = () => {
   const { t } = useTranslation('creditPane');
   return (
-    <PaneLayout minH="auto" p={1}>
-      <Heading pl={4} pb={1} fontSize="calc(30px + 0.2vw)">{t('credits')}</Heading>
+    <PaneLayout minH="auto" p={4}>
+      <Heading pl={4} pb={1} size="2xl">{t('credits')}</Heading>
       <Stack pl={5} spacing={3} direction="row" divider={<StackDivider />}>
         <Box mr={5}>
           <Heading pb={1} pt={1} fontSize="calc(20px + 0.2vw)" textDecoration="underline" top="5%">{t('campaignTeam')}</Heading>
@@ -28,6 +28,7 @@ const CreditPane: NextPage = () => {
           <UnorderedList fontSize="calc(14px + 0.2vw)">
             <ListItem>{t('luke')}</ListItem>
             <ListItem>{t('roch')}</ListItem>
+            <ListItem>{t('leo')}</ListItem>
           </UnorderedList>
         </Box>
       </Stack>
