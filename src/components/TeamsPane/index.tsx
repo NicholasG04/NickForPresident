@@ -22,11 +22,11 @@ const TextSection: React.FC = () => {
 };
 
 const DesktopContent: React.FC = () => (
-  <HStack minH="100vh" align="stretch">
+  <HStack align="stretch">
     <TextSection />
     <Spacer />
     <Parallax y={[-10, 10]}>
-      <Image src="/teams.png" h="120vh" minH="1100px" maxW="none" />
+      <Image src="/teams.png" minH="140vh" maxW="none" />
     </Parallax>
   </HStack>
 );

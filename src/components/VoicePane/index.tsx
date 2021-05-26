@@ -45,6 +45,7 @@ const VoicePane: NextPage = () => {
           <Heading textTransform="uppercase" size="5xl" w="100%">
             {t('titleBlack')}
             <chakra.span color="purple">{t('titlePurple')}</chakra.span>
+            {t('titleBlack2')}
           </Heading>
 
           <HStack flexGrow={1} spacing={10} justify="center" align="flex-start" w="100%" h="100%">

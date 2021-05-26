@@ -17,11 +17,11 @@ const EndorsementsPane: NextPage = () => {
 
   const DesktopGrid: React.FC = () => (
     <Grid templateColumns="6fr 4fr" templateRows="repeat(4, 1fr)" gap="15px" w="100%" h="100%" p={7}>
-      <GridItem gridArea="1 / 1 / 4 / 2;"><Endorsement fontSize="2xl" h="100%" name="Mr Kane" content={t('kane')} /></GridItem>
-      <GridItem gridArea="1 / 2 / 2 / 3"><Endorsement fontSize="2xl" h="100%" name="Mr Murphy" content={t('murphy')} /></GridItem>
-      <GridItem gridArea="2 / 2 / 3 / 3"><Endorsement fontSize="xl" h="100%" name="Mme Elliott" content={t('elliott')} /></GridItem>
+      <GridItem gridArea="1 / 1 / 4 / 2;"><Endorsement fontSize="3xl" h="100%" name="Mr Kane" content={t('kane')} /></GridItem>
+      <GridItem gridArea="1 / 2 / 2 / 3"><Endorsement fontSize="3xl" h="100%" name="Mr Murphy" content={t('murphy')} /></GridItem>
+      <GridItem gridArea="2 / 2 / 3 / 3"><Endorsement fontSize="2xl" h="100%" name="Mme Elliott" content={t('elliott')} /></GridItem>
       <GridItem gridArea="3 / 2 / 4 / 3"><Endorsement fontSize="2xl" h="100%" name="Mme Bell" content={t('bell')} /></GridItem>
-      <GridItem gridArea="4 / 1 / 5 / 3"><Endorsement textAlign="left" fontSize="2xl" h="100%" name="Notable Student Endorsements" content={t('students')} /></GridItem>
+      <GridItem gridArea="4 / 1 / 5 / 3"><Endorsement textAlign="left" fontSize="3xl" h="100%" name="Notable Student Endorsements" content={t('students')} /></GridItem>
     </Grid>
   );
 
@@ -41,7 +41,7 @@ const EndorsementsPane: NextPage = () => {
     <PaneLayout bgColor="blackAlpha.900" color="white">
       <VStack minH="100vh">
         <Heading textTransform="uppercase" size="5xl" width="100%" p={8}>
-          Endorsements
+          {t('title')}
         </Heading>
         {MainContent}
       </VStack>
