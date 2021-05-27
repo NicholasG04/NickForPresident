@@ -24,6 +24,7 @@ const VoicePane: NextPage = () => {
                 muted
                 src="/banner_vid.mp4"
                 style={{
+                  height: '120%',
                   width: '100vw',
                   opacity: '0.7',
                   objectFit: 'cover',
@@ -33,6 +34,9 @@ const VoicePane: NextPage = () => {
             expanded: true,
           },
         ]}
+        style={{
+          height: '100%',
+        }}
       >
 
         <Box pos="relative" zIndex={2} p={5}>
