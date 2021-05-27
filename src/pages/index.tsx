@@ -39,7 +39,7 @@ export default function Home() {
 
     timerComponents.push(
       <span>
-        {timeLeft[interval]} {interval}{" "}
+        {timeLeft[interval]} {timeLeft[interval] === 1 ? interval.substring(0, interval.length - 1) : interval}{" "}
       </span>
     );
   });
