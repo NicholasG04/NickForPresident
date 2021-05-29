@@ -22,19 +22,21 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 const Home: NextPage<{ parallaxController: ParallaxController }> = ({ parallaxController }) => {
   const router = useRouter();
   useEffect(() => {
-    Events.scrollEvent.register('end', () => {
-      parallaxController.update();
-    });
+    const handler = (): void => parallaxController.update();
 
-    const handleRouteChange = (): void => parallaxController.update();
-
-    router.events.on('routeChangeEnd', handleRouteChange);
+    window.addEventListener('load', handler);
+    Events.scrollEvent.register('end', handler);
+    router.events.on('routeChangeEnd', handler);
+    const resizeObserver = new ResizeObserver(handler);
+    resizeObserver.observe(document.body);
 
     return () => {
+      window.removeEventListener('load', handler);
       Events.scrollEvent.remove('end');
-      router.events.off('routeChangeEnd', handleRouteChange);
+      router.events.off('routeChangeEnd', handler);
+      resizeObserver.unobserve(document.body);
     };
-  });
+  }, [parallaxController, router.events]);
 
   return (
     <>

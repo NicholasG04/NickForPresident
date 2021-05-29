@@ -24,7 +24,7 @@ const VoicePane: NextPage = () => {
                 muted
                 src="/banner_vid.mp4"
                 style={{
-                  height: '140%',
+                  height: '100%',
                   width: '100vw',
                   opacity: '0.7',
                   objectFit: 'cover',
