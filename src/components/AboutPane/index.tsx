@@ -16,7 +16,7 @@ const AboutPane: NextPage = () => {
         </Heading>
 
         <HStack flexWrap="wrap" p={10} flexGrow={1} spacing={10} justify="center" width="100%">
-          <Image src="/instagram_pfp.png" alt="Nick in front of Kimberley College" minWidth="250px" maxWidth="500px" flexBasis="40%" flexGrow={9999} p={5} />
+          <Image src="/instagram_pfp.png" alt="Nick in front of Kimberley College" minWidth="250px" maxWidth="500px" flexBasis="40%" flexGrow={9999} p={5} objectFit="contain" />
           <Text size="paneBody" fontWeight="600" flexBasis="50%" maxWidth="100%" flexGrow={1} marginInlineStart="0 !important">
             {t('paneBody')}
           </Text>
