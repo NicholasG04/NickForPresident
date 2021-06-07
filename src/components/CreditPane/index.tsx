@@ -17,7 +17,6 @@ const CreditPane: NextPage = () => {
             <ListItem>{t('nick')}</ListItem>
             <ListItem>{t('dustin')}</ListItem>
             <ListItem>{t('john')}</ListItem>
-            <ListItem>{t('josh')}</ListItem>
             <ListItem>{t('adam')}</ListItem>
             <ListItem>{t('raffi')}</ListItem>
             <ListItem>{t('davo')}</ListItem>
